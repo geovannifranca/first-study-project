@@ -1,0 +1,320 @@
+@font-face {
+  font-family: 'effra_rg';
+  src: url('fonteffra/Effra_Trial_Rg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'effra_md';
+  src: url('fonteffra/Effra_Trial_Md.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'effra_bd';
+  src: url('fonteffra/Effra_Trial_Bd.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'effra_xbd';
+  src: url('fonteffra/Effra_Trial_XBd.ttf') format('truetype');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --font-color: #ffffff;
+  --color-logo: #A8FF35;
+  --font-logo: 'effra_md';
+  --font-nav: 'effra_rg';
+  --font-h2: 'effra_xbd';
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("imagens/background.svg") no-repeat center center;
+  background-size: cover;
+  width: 100vw;
+  height: 98vh;
+  color: #FFFFFF;
+}
+
+
+/*---------Header---------------*/
+
+.navBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow:1px 1px 8px #A8FF35;;
+  width: 100%;
+  padding: 25px 80px;
+  
+}
+
+.navLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.623rem;
+
+
+}
+
+.logo{
+  width: 100%;
+
+}
+
+h1 a{
+  font-family: var(--font-logo);
+  font-size: 1.5rem;
+  color: var(--font-color)
+}
+
+.nav-menu, .menu-item, a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+
+  text-decoration:none;
+  list-style-type: none;
+  font-size: 18px;
+  font-family: var(--font-nav);
+  color: var(--font-color)
+
+}
+
+.nav-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+
+  font-size: 18px;
+  font-family: var(--font-nav);
+  color: var(--font-color)
+}
+
+.nav-btn > .btn-register{
+  width: 129px;
+  height: 42px;
+  border-radius: 40px;
+  background-color: #ffffff;
+
+  
+  color: #000000;
+
+  justify-content: center;
+}
+
+.btn-register:hover{
+  color: #A8FF35;
+  background-color: rgba(227, 227, 227, 0.335);
+  transition: 0.2s;
+}
+
+.burguer{
+  display: none;
+}
+
+.menu-item a:hover, .login:hover{
+  color: #A8FF35;
+  transition: 0.2s;
+}
+
+
+/*--------main---------*/
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+}
+
+.sessao1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 90px;
+
+
+}
+
+.sub1, .sub2{
+  font-family: var(--font-h2);
+  font-size: 5rem;
+
+}
+
+.sessao1 > p{
+  width: 100%;
+
+  text-align: center;
+
+  font-family: var(--font-nav);
+  font-size: 1.260rem;
+  color: #8B8B8B;
+  margin-top: 20px;
+}
+
+.divBtn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:end;
+  width: 500px;
+  height: 100px;
+  padding-right: 35px;
+  gap: 18px;
+
+}
+
+
+
+.btn > a{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+
+  width: 180px;
+  height: 57px;
+  border-radius: 40px;
+  background-color: var(--color-logo);
+
+  margin-top: 40px;
+
+  font-family: var(--font-h2);
+  font-size: 18px;
+ color: #000000;
+}
+
+.sessao2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+    
+  padding: 0 25%;
+  width: 100%;
+  height: auto;
+  
+  margin-top: 100px;
+
+}
+
+
+.redes > img{
+  width:150%;
+  min-width: 150px;
+}
+
+#twitter{
+  z-index: 4;
+  
+}
+
+#pinterest{
+  z-index: 3;
+  margin-top: 50px;
+}
+
+#facebook{
+  z-index: 2;
+}
+
+#dribbble{
+  margin-top: 50px;
+  z-index: 1;
+}
+
+
+/*-----midias----*/
+
+@media (max-width:1050px) {
+
+  .navBar{
+    padding: 12px 65px;
+  }
+
+  nav, .nav-btn {
+    display: none;
+  }
+
+  .burguer{
+    display: block;
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width:750px) {
+
+  body{
+    background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  }
+
+  .navBar{
+    padding: 8px 50px;
+  }
+
+  h1 a{
+    display: none;
+  }
+
+  .sub1, .sub2{
+    font-size: 4rem;
+  }
+
+  .sessao1 > p{
+    font-size: 1rem;
+  }
+
+  .btn > a{
+  width: 130px;
+  height: 45px;
+  border-radius: 30px;
+  font-size: 12px;
+  }
+
+
+
+  .sessao2{
+    margin-top: 10px;
+    width: 20%;
+    flex-wrap: wrap;
+  }
+    #twitter{
+      margin-top: 3px;
+      
+    }
+    
+    #pinterest{
+      margin-top: 3px;
+    }
+    
+    #facebook{
+      margin-top: 3px;
+    }
+    
+    #dribbble{
+      margin-top: 3px;
+
+    }
+  }
+
+
+
